@@ -68,7 +68,7 @@ const PRODUK_DATA = [
     kategori: "cupcake",
     harga: 110000,
     satuan: "7 pcs",
-    gambar: "images/cupcake bouquet.jpg",
+    gambar: "images/Cupcake Bouquet.jpg",
     deskripsi: "Sekumpulan cupcake cantik dengan hiasan buttercream berbentuk bunga yang dirangkai menyerupai buket. Manis, unik, dan berkesan sebagai hadiah spesial di setiap momen 🧁",
     badge: "New 🌸",
     badgeClass: "new"
