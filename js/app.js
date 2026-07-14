@@ -185,7 +185,7 @@ function initEvents() {
 
   // Mobile nav toggle
   document.getElementById('navToggle')?.addEventListener('click', () => {
-    document.getElementById('mainNav')?.classList.toggle('open');
+    document.querySelector('.nav-list')?.classList.toggle('open');
   });
 
   // ===== AUTH (Login / Logout Admin & Pelanggan) =====
@@ -442,7 +442,7 @@ function initSmoothScroll() {
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        document.getElementById('mainNav')?.classList.remove('open');
+        document.querySelector('.nav-list')?.classList.remove('open');
       }
     });
   });
