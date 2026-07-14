@@ -85,6 +85,7 @@ function applyModeUI() {
   // Sembunyikan tombol keranjang & link toko di navbar saat admin
   document.querySelectorAll('.nav-shop-link').forEach(el => el.classList.toggle('hidden', admin));
   document.getElementById('cartBtnWrap')?.classList.toggle('hidden', admin);
+  document.getElementById('cartBtnHeader')?.classList.toggle('hidden', admin);
   document.getElementById('adminNavLink')?.classList.toggle('hidden', !admin);
 
   // Panel admin hanya tampil saat mode admin
