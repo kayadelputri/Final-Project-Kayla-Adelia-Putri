@@ -107,10 +107,8 @@ function formatRupiah(angka) {
 function updateCartUI() {
   const cart = getCart();
   const totalQty = cart.reduce((a, i) => a + i.qty, 0);
-
   const el = document.getElementById('cart-count');
   if (el) el.textContent = totalQty;
-
   const elHeader = document.getElementById('cart-count-header');
   if (elHeader) elHeader.textContent = totalQty;
 }
