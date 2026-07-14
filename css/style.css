@@ -104,6 +104,21 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 .nav-toggle { display: none; font-size: 1.5rem; color: var(--pink-deep); padding: .3rem; }
 
+.nav-cart-header{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:.4rem;
+    background:var(--white);
+    border:2px solid var(--pink-deep);
+    border-radius:999px;
+    padding:7px 14px;
+    cursor:pointer;
+}
+
+.nav-cart-header .cart-badge{
+    margin-left:4px;
+}
 /* === AUTH BUTTON === */
 .nav-auth {
   display: flex; align-items: center; gap: 6px;
