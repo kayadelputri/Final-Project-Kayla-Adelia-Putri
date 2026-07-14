@@ -2,8 +2,8 @@
 
 > *Handmade with Love — Kue cantik, lembut, dan penuh cinta untuk setiap momen spesialmu 🎀*
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-GitHub_Pages-pink?style=for-the-badge)](https://kayadelputri.github.io/ecommerce-sederhana-kayla-adelia-putri/)
-[![Repo](https://img.shields.io/badge/📁_Repository-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/kayadelputri/ecommerce-sederhana-kayla-adelia-putri)
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-GitHub_Pages-pink?style=for-the-badge)](https://kayadelputri.github.io/Final-Project-Kayla-Adelia-Putri/)
+[![Repo](https://img.shields.io/badge/📁_Repository-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/kayadelputri/Final-Project-Kayla-Adelia-Putri)
 
 ---
 
@@ -25,62 +25,80 @@
 
 **Lumicake by Kay** adalah prototype website e-commerce untuk bisnis kue dan bakery handmade yang berbasis di Bandung. Proyek ini dibuat sebagai tugas akhir mata kuliah **KAIT II** Program Studi Administrasi Bisnis, Semester Genap 2025/2026.
 
-Website ini mengintegrasikan konsep e-commerce modern dengan fitur-fitur bisnis yang fungsional — mulai dari katalog produk, keranjang belanja berbasis localStorage, sistem filter dan pencarian, checkout dengan validasi form, hingga simulasi payment gateway.
+Website ini mengintegrasikan konsep e-commerce modern dengan fitur-fitur bisnis yang fungsional — mulai dari katalog produk, keranjang belanja berbasis localStorage, sistem filter dan pencarian, checkout dengan validasi form dan pilihan metode pembayaran, hingga **Panel Admin** lengkap (login role admin/pelanggan, laporan penjualan, kelola stok, kelola produk, kelola pesanan, dan kelola akun pelanggan) untuk mensimulasikan operasional bisnis secara end-to-end.
 
 ---
 
 ## ✨ Fitur Website
 
-### Fitur Teknis
+### Fitur Teknis — Sisi Pelanggan
 | Fitur | Status | Keterangan |
 |-------|--------|------------|
 | Responsive Design | ✅ | Desktop, tablet, mobile — media query lengkap |
 | Navbar + Hero Banner | ✅ | Sticky navbar, smooth scroll, mobile hamburger menu |
 | Katalog Produk (10 produk) | ✅ | 10 produk dari 5 kategori berbeda |
 | Modal Detail Produk | ✅ | Klik produk untuk melihat detail + pilih qty |
-| Filter Kategori | ✅ | Filter by: Semua, Birthday, Wedding, Cupcake, Pastry, Cookies |
+| Filter Kategori | ✅ | Filter by: Semua, Cakes, Wedding Cake, Cupcake, Pastry, Cookies & Sweet Treats |
 | Search Produk | ✅ | Pencarian real-time dengan debounce |
 | Filter Harga (Range Slider) | ✅ | Filter berdasarkan batas harga maksimum |
 | Urutkan Produk | ✅ | Default, harga murah-mahal, harga mahal-murah, A–Z |
+| Stok Real-Time | ✅ | Stok berkurang otomatis saat produk masuk keranjang, tombol nonaktif jika habis |
 | Keranjang Belanja (localStorage) | ✅ | Add, update qty, hapus item, kosongkan |
 | Total Otomatis | ✅ | Subtotal + ongkir dihitung otomatis |
 | Halaman Checkout | ✅ | Form lengkap + pilihan metode pembayaran |
 | Validasi Form | ✅ | Nama, email, HP, alamat — dengan pesan error |
-| Simulasi Payment Gateway | ✅ | Midtrans, Xendit, COD |
+| Metode Pembayaran | ✅ | E-wallet (QRIS), Transfer Bank, COD |
 | Notifikasi Toast | ✅ | Feedback visual setiap aksi |
 | Google Analytics | ✅ | Script GA4 + event tracking (add_to_cart, checkout, dll) |
 | Smooth Scroll + Animasi | ✅ | Page load, hover, scroll effects |
 | Accessibility | ✅ | ARIA labels, keyboard navigation, prefers-reduced-motion |
+
+### Fitur Teknis — Sisi Admin
+| Fitur | Status | Keterangan |
+|-------|--------|------------|
+| Login Akun (Admin & Pelanggan) | ✅ | Login berbasis localStorage, membedakan tampilan Admin dan Pelanggan |
+| Panel Admin | ✅ | Muncul otomatis di navbar setelah login sebagai admin |
+| Tab Ringkasan | ✅ | Total pendapatan, jumlah pesanan, rata-rata order, produk terlaris |
+| Tab Kelola Stok | ✅ | Lihat & ubah stok tiap produk secara manual |
+| Tab Kelola Produk | ✅ | Tambah, edit, dan hapus produk (CRUD) langsung dari panel |
+| Tab Pesanan | ✅ | Lihat daftar pesanan masuk & ubah status (Baru → Diproses → Dikirim → Selesai) |
+| Tab Akun Pelanggan | ✅ | Tambah & hapus akun pelanggan baru |
 
 ---
 
 ## 📁 Struktur Folder
 
 ```
-lumicake-by-kay/
+Final-Project-Kayla-Adelia-Putri/
 │
-├── index.html              # Halaman utama
+├── index.html              # Halaman utama (produk, cart, checkout, panel admin, login)
 │
 ├── css/
 │   └── style.css           # Semua styling (responsive, animasi, komponen)
 │
 ├── js/
-│   ├── products.js         # Data 10 produk (nama, harga, kategori, deskripsi)
+│   ├── products.js         # Data dasar 10 produk (nama, harga, kategori, deskripsi, stok awal)
+│   ├── produk-store.js     # CRUD produk oleh admin (tambah/edit/hapus), digabung dgn products.js
+│   ├── stock.js            # Manajemen stok per produk (localStorage), berkurang otomatis saat checkout
 │   ├── cart.js             # Logika keranjang belanja + localStorage
-│   └── app.js              # Logika utama: render produk, filter, modal, checkout
+│   ├── auth.js             # Login & akun (admin/pelanggan), tambah akun pelanggan baru
+│   ├── orders.js           # Simpan & kelola pesanan masuk untuk Panel Admin
+│   ├── admin.js            # Logika Panel Admin: ringkasan, stok, produk, pesanan, akun
+│   └── app.js              # Logika utama: render produk, filter, modal, checkout, init semua modul
 │
 ├── images/
-│   ├── lumicake.png        # Gambar hero
+│   ├── lumicake.png                       # Gambar hero
 │   ├── pearly butterfly.webp
 │   ├── sweet harmony cookies.webp
 │   ├── rose macaron box.jpg
 │   ├── blueberry cheesecake.jpg
-│   ├── sakura birthday.jpg
-│   ├── cupcake bouquet.jpg
-│   ├── wedding cake.jpg
-│   ├── croissant.jpg
-│   ├── unicorn cake.jpg
-│   └── choco brownie.jpg
+│   ├── Lily Blossom Wedding Cake.jpg
+│   ├── Cupcake Bouquet.jpg
+│   ├── Dubai Chocolate Chewy Cookie.jpg
+│   ├── Almond Butter Croissant.jpg
+│   ├── Cookies & Cream Cake.jpg
+│   ├── Molten Chocolate Lava Cake.jpg
+│   └── qris lumicakeby_kay.jpg            # QR code pembayaran e-wallet
 │
 └── README.md               # Dokumentasi ini
 ```
@@ -92,13 +110,23 @@ lumicake-by-kay/
 ### Lokal (tanpa server)
 1. Clone repository:
    ```bash
-   git clone https://github.com/kayadelputri/ecommerce-sederhana-kayla-adelia-putri.git
+   git clone https://github.com/kayadelputri/Final-Project-Kayla-Adelia-Putri.git
    ```
 2. Buka folder hasil clone
 3. Buka `index.html` di browser favorit kamu
 
 ### Live (GitHub Pages)
-Langsung kunjungi: [https://kayadelputri.github.io/ecommerce-sederhana-kayla-adelia-putri/](https://kayadelputri.github.io/ecommerce-sederhana-kayla-adelia-putri/)
+Langsung kunjungi: [https://kayadelputri.github.io/Final-Project-Kayla-Adelia-Putri/](https://kayadelputri.github.io/Final-Project-Kayla-Adelia-Putri/)
+
+### Login Panel Admin
+Klik ikon akun di navbar untuk membuka modal login, lalu gunakan salah satu akun demo berikut (tersedia juga tombol "Isi Akun Admin" / "Isi Akun Pelanggan" untuk mengisi otomatis):
+
+| Role | Username | Password |
+|---|---|---|
+| Admin | `admin` | `admin123` |
+| Pelanggan | `kayla` | `kayla123` |
+
+Setelah login sebagai Admin, menu **🛠️ Panel Admin** akan muncul di navbar.
 
 ---
 
@@ -218,21 +246,22 @@ Lumicake menjual langsung ke konsumen akhir tanpa perantara, sehingga margin keu
 Pilih Produk → Tambah ke Keranjang → Cek Keranjang → Isi Form Checkout → Pilih Pembayaran → Konfirmasi → Proses Pesanan → Pengiriman
 ```
 
-#### Simulasi Payment Gateway yang Diintegrasikan
+#### Metode Pembayaran yang Tersedia di Website
 
-**Midtrans** (Utama)
-- Mendukung: Transfer Bank, GoPay, OVO, Dana, ShopeePay, QRIS, Kartu Kredit
-- Keunggulan: Settlement T+1, dashboard merchant lengkap, fraud detection
-- Biaya: 0.7% – 2% per transaksi
+**💳 E-Wallet (QRIS)**
+- Mendukung pembayaran dari GoPay, OVO, Dana, dan e-wallet lain via scan QRIS
+- Saat dipilih, sistem menampilkan QR code pembayaran resmi Lumicake by Kay
+- Pelanggan konfirmasi manual lewat tombol "Saya Sudah Bayar"
 
-**Xendit** (Alternatif)
-- Mendukung: Virtual Account (BCA, BNI, Mandiri, BRI, Permata)
-- Keunggulan: Integrasi API mudah, disbursement cepat
-- Biaya: Rp 4.000 – Rp 5.500 per transaksi VA
+**🏦 Transfer Bank**
+- Menerima transfer dari semua bank
+- Konfirmasi pembayaran juga melalui QR/instruksi yang sama sebelum pesanan diproses
 
-**COD (Cash on Delivery)**
+**💵 COD (Cash on Delivery)**
 - Khusus area Bandung Kota dan sekitarnya
-- Maksimum order: Rp 500.000
+- Pesanan langsung tercatat sebagai "Baru" di Panel Admin tanpa perlu konfirmasi pembayaran di awal
+
+> ℹ️ Untuk versi produksi (bukan tugas akademik), metode pembayaran ini dapat dikembangkan lebih lanjut dengan mengintegrasikan payment gateway pihak ketiga seperti Midtrans atau Xendit agar verifikasi pembayaran berjalan otomatis secara real-time.
 
 ---
 
@@ -292,10 +321,12 @@ trackEvent('checkout', 'purchase', orderId);            // Berhasil beli
 
 ### Keamanan Transaksi
 - **SSL/HTTPS:** GitHub Pages sudah otomatis HTTPS
-- **Payment Gateway Tersertifikasi:** Midtrans dan Xendit sudah PCI-DSS compliant
 - **Validasi Form Client-Side:** Validasi nama, email, HP, dan alamat sebelum submit
-- **Tidak Menyimpan Data Kartu:** Semua data pembayaran ditangani langsung oleh gateway
-- **LocalStorage Aman:** Keranjang belanja tersimpan lokal, tidak ada data sensitif
+- **Tidak Ada Input Kartu:** Website tidak meminta atau menyimpan data kartu kredit/debit sama sekali; pembayaran dilakukan lewat QRIS/transfer manual
+- **Login Berbasis Role:** Akses Panel Admin (kelola stok, produk, pesanan, akun) hanya terbuka untuk akun dengan role admin
+- **LocalStorage Aman:** Keranjang, pesanan, dan data akun tersimpan lokal di browser, tidak ada data sensitif seperti kartu atau OTP
+
+> ⚠️ Catatan: karena ini proyek akademik berbasis front-end murni (tanpa backend/database), penyimpanan akun & pesanan di `localStorage` bersifat demo — cocok untuk simulasi alur bisnis, namun untuk produksi sesungguhnya perlu backend, database, dan payment gateway resmi yang tersertifikasi.
 
 ### Rencana Pemeliharaan
 | Frekuensi | Kegiatan |
@@ -333,6 +364,7 @@ trackEvent('checkout', 'purchase', orderId);            // Berhasil beli
 | Katalog Produk | `screenshots/desktop-produk.png` | `screenshots/mobile-produk.png` |
 | Keranjang Belanja | `screenshots/desktop-cart.png` | `screenshots/mobile-cart.png` |
 | Checkout | `screenshots/desktop-checkout.png` | `screenshots/mobile-checkout.png` |
+| Panel Admin | `screenshots/desktop-admin.png` | `screenshots/mobile-admin.png` |
 
 ---
 
