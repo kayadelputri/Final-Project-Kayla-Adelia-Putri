@@ -104,21 +104,6 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 .nav-toggle { display: none; font-size: 1.5rem; color: var(--pink-deep); padding: .3rem; }
 
-.nav-cart-header{
-    display:none;
-    align-items:center;
-    justify-content:center;
-    gap:.4rem;
-    background:var(--white);
-    border:2px solid var(--pink-deep);
-    border-radius:999px;
-    padding:7px 14px;
-    cursor:pointer;
-}
-
-.nav-cart-header .cart-badge{
-    margin-left:4px;
-}
 /* === AUTH BUTTON === */
 .nav-auth {
   display: flex; align-items: center; gap: 6px;
@@ -985,17 +970,10 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
     width: 100%; box-sizing: border-box;
     background: var(--white); padding: 1rem 1.5rem; gap: .7rem;
     border-bottom: 2px solid var(--pink-pastel); z-index: 490;
-    max-height: calc(100vh - 64px); overflow-y: auto;
+    max-height: calc(100dvh - 64px); overflow-y: auto; -webkit-overflow-scrolling: touch;
   }
   .nav-list.open { display: flex; }
   .nav-toggle { display: block; }
-   .nav-cart-header {
-  display: flex;
-}
-
-.nav-cart {
-  display: none;
-}
   #mainNav { position: static; }
   .footer-inner { grid-template-columns: 1fr; gap: 1.4rem; }
   .filter-bar { flex-direction: column; align-items: stretch; }
