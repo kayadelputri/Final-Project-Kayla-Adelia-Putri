@@ -17,7 +17,6 @@
 6. [Strategi Digital & Analytics](#-strategi-digital--analytics)
 7. [Keamanan & Pemeliharaan](#-keamanan--pemeliharaan)
 8. [Teknologi yang Digunakan](#teknologi-yang-digunakan)
-9. [Screenshots](#screenshots)
 
 ---
 
@@ -25,7 +24,7 @@
 
 **Lumicake by Kay** adalah prototype website e-commerce untuk bisnis kue dan bakery handmade yang berbasis di Bandung. Proyek ini dibuat sebagai tugas akhir mata kuliah **KAIT II** Program Studi Administrasi Bisnis, Semester Genap 2025/2026.
 
-Website ini mengintegrasikan konsep e-commerce modern dengan fitur-fitur bisnis yang fungsional — mulai dari katalog produk, keranjang belanja berbasis localStorage, sistem filter dan pencarian, checkout dengan validasi form dan pilihan metode pembayaran, hingga **Panel Admin** lengkap (login role admin/pelanggan, laporan penjualan, kelola stok, kelola produk, kelola pesanan, dan kelola akun pelanggan) untuk mensimulasikan operasional bisnis secara end-to-end.
+Website ini mengintegrasikan konsep e-commerce modern dengan fitur-fitur bisnis yang fungsional mulai dari katalog produk, keranjang belanja berbasis localStorage, sistem filter dan pencarian, checkout dengan validasi form dan pilihan metode pembayaran, hingga **Panel Admin** lengkap (login role admin/pelanggan, laporan penjualan, kelola stok, kelola produk, kelola pesanan, dan kelola akun pelanggan) untuk mensimulasikan operasional bisnis secara end-to-end.
 
 ---
 
@@ -196,15 +195,15 @@ Industri bakery dan patisserie Indonesia tumbuh pesat pasca pandemi. Tren *custo
 
 | Kategori | Produk | Rentang Harga |
 |---|---|---|
-| 🎂 Birthday Cake | Pearly Butterfly Cake, Sakura Birthday Cake, Rainbow Unicorn Cake | Rp 180.000 – Rp 275.000 |
-| 💍 Wedding Cake | Elegant Wedding Tier Cake | Rp 850.000 (3 tier) |
-| 🧁 Cupcake | Mini Cupcake Bouquet | Rp 95.000 / set 6 |
-| 🍪 Cookies | Sweet Harmony Cookies | Rp 67.000 / pcs |
-| 🍞 Pastry & Roti | Rose Macaron Box, Blueberry Cheesecake, Croissant Almond, Choco Lava Brownie | Rp 14.000 – Rp 52.000 |
+| 🎂 Birthday Cake | Pearly Butterfly Cake, Blueberry Cheesecake Bliss, Cookies & Cream Cake, Molten Chocolate Lava Cake | Rp 14.000 – Rp 180.000 |
+| 💍 Wedding Cake | Lily Blossom Wedding Cake | Rp 3.500.000 (3 tier) |
+| 🧁 Cupcake | Mini Cupcake Bouquet | Rp 110.000 / 7 pcs |
+| 🍪 Cookies & Sweet Treats | Sweet Harmony Cookies, Rose Macaron Box, Dubai Chocolate Chewy Cookie | Rp 45.000 - 68.000 |
+| 🍞 Pastry | Almond Butter Croissant | Rp 25.000 / pcs |
 
 #### Strategi Manajemen Produk
 - **Product Mix:** Kombinasi produk premium (wedding cake) + produk entry-level (brownie, slice cheesecake) untuk menjangkau berbagai segmen harga
-- **Badge Strategy:** Best Seller, Baru, Diskon, Premium — untuk memengaruhi keputusan beli
+- **Badge Strategy:** Best Seller, New, Diskon, Premium, Populer, Favorit — untuk memengaruhi keputusan beli
 - **Deskripsi Produk:** Menggunakan bahasa emosional dan sensorik ("meleleh di mulut", "harum mawar asli") untuk meningkatkan konversi
 - **Foto Produk:** Foto dengan pencahayaan natural, latar bersih, dan angle estetik
 
@@ -261,7 +260,7 @@ Pilih Produk → Tambah ke Keranjang → Cek Keranjang → Isi Form Checkout →
 - Khusus area Bandung Kota dan sekitarnya
 - Pesanan langsung tercatat sebagai "Baru" di Panel Admin tanpa perlu konfirmasi pembayaran di awal
 
-> ℹ️ Untuk versi produksi (bukan tugas akademik), metode pembayaran ini dapat dikembangkan lebih lanjut dengan mengintegrasikan payment gateway pihak ketiga seperti Midtrans atau Xendit agar verifikasi pembayaran berjalan otomatis secara real-time.
+> ℹ️ Untuk versi produksi (bukan tugas akademik), metode pembayaran ini dapat dikembangkan lebih lanjut dengan mengintegrasikan payment gateway pihak ketiga seperti E-wallet atau Transfer Bank agar verifikasi pembayaran berjalan otomatis secara real-time.
 
 ---
 
@@ -354,20 +353,6 @@ trackEvent('checkout', 'purchase', orderId);            // Berhasil beli
 
 ---
 
-## 📸 Screenshots
-
-> *(Tambahkan screenshot setelah upload ke GitHub Pages)*
-
-| Halaman | Desktop | Mobile |
-|---|---|---|
-| Hero / Home | `screenshots/desktop-home.png` | `screenshots/mobile-home.png` |
-| Katalog Produk | `screenshots/desktop-produk.png` | `screenshots/mobile-produk.png` |
-| Keranjang Belanja | `screenshots/desktop-cart.png` | `screenshots/mobile-cart.png` |
-| Checkout | `screenshots/desktop-checkout.png` | `screenshots/mobile-checkout.png` |
-| Panel Admin | `screenshots/desktop-admin.png` | `screenshots/mobile-admin.png` |
-
----
-
 ## 👩‍💻 Informasi Akademik
 
 | | |
@@ -375,8 +360,9 @@ trackEvent('checkout', 'purchase', orderId);            // Berhasil beli
 | **Nama** | Kayla Adelia Putri |
 | **Mata Kuliah** | KAIT II |
 | **Program Studi** | Administrasi Bisnis |
-| **Semester** | Genap 2025/2026 |
-| **Bobot Tugas** | 40% dari nilai akhir |
+| **Nim** | 209250085 |
+| **Kelas** | Administrasi Bisnis 3 / ABI 3 |
+| **Semester** | 2 |
 | **Judul Proyek** | Membangun Website E-Commerce Fungsional dengan Integrasi Strategi Bisnis Modern |
 
 ---
