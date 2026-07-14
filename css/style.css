@@ -104,6 +104,17 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 
 .nav-toggle { display: none; font-size: 1.5rem; color: var(--pink-deep); padding: .3rem; }
 
+.nav-cart-header {
+  display: none; /* cuma tampil di HP (lihat media query 640px) */
+  align-items: center; gap: 4px;
+  background: var(--pink-pastel); color: var(--pink-deep);
+  padding: 8px 12px; border-radius: 30px; font-size: 1.1rem;
+  position: relative;
+}
+.nav-cart-header .cart-badge {
+  position: static; margin-left: 2px;
+}
+
 /* === AUTH BUTTON === */
 .nav-auth {
   display: flex; align-items: center; gap: 6px;
@@ -974,6 +985,8 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   }
   .nav-list.open { display: flex; }
   .nav-toggle { display: block; }
+  .nav-cart-header { display: flex; }
+  #cartBtnWrap { display: none; } /* tombol "Keranjang" teks di dalam menu disembunyikan, diganti ikon di header */
   #mainNav { position: static; }
   .footer-inner { grid-template-columns: 1fr; gap: 1.4rem; }
   .filter-bar { flex-direction: column; align-items: stretch; }
